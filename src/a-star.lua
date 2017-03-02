@@ -194,7 +194,7 @@ function PolygonMap:inLineOfSight( startPos, endPos )
 	local epsilon = 0.5
 	-- dont waste edge on the same start and end location
 	if startPos:diff( endPos ):length() < epsilon then
-		return false
+		return true
 	end
 
 	-- Not in LOS if any edge is intersected by the start-end line segment
